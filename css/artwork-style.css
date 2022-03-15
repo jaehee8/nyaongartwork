@@ -207,13 +207,13 @@ li {
   align-items: center;
   flex-direction: row;
 }
-#container main section:nth-child(2) > div:nth-child(1) > div {
+#container main section:nth-child(2) > div:nth-child(1) #profile {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
 }
-#container main section:nth-child(2) > div:nth-child(1) > div > div {
+#container main section:nth-child(2) > div:nth-child(1) #profile > div {
   width: 5vh;
   height: 5vh;
   background-color: transparent;
@@ -223,10 +223,29 @@ li {
   background-repeat: no-repeat;
   border-radius: 50%;
 }
-#container main section:nth-child(2) > div:nth-child(1) > div > span {
+#container main section:nth-child(2) > div:nth-child(1) #profile > span {
   color: #222;
   font-size: 1.4em;
   margin-left: 5px;
+}
+#container main section:nth-child(2) > div:nth-child(1) #zzim {
+  width: 15%;
+  height: 7vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#container main section:nth-child(2) > div:nth-child(1) #zzim > button {
+  width: 3.5vh;
+  height: 3.5vh;
+  background-color: transparent;
+  border: 0;
+  background-image: url(../images/zzim_1.png);
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 #container main section:nth-child(2) > div:nth-child(2) {
   width: 90%;
