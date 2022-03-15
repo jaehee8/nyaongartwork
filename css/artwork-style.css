@@ -94,7 +94,7 @@ li {
 #container header {
   width: inherit;
   height: 7vh;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,8 +163,31 @@ li {
   align-items: center;
   flex-direction: row;
 }
-#container nav > div > div {
-  border: 1px solid red;
+#container nav > div > span {
+  display: block;
+  font-size: 1.4em;
+}
+#container nav > div > button {
+  width: 45%;
+  height: 5vh;
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 2vw;
+  border: 0;
+  border-radius: 1vh;
+  color: #fff;
+}
+#container nav > div > button > div {
+  width: 4.3vh;
+  height: 4.3vh;
+  background-color: transparent;
+  background-image: url(../images/hover-icon-message.png);
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 #container main {
   margin-top: 7vh;

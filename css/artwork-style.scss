@@ -122,7 +122,7 @@ li {
 
 #container {
   & header {
-    @include size(inherit, $height-1, $color-1);
+    @include size(inherit, $height-1, rgba(255,255,255,.8));
     @include flex(center, center, row);
     position: fixed;
     top: 0;
@@ -159,15 +159,26 @@ li {
     & > div {
       @include size(90%, inherit, transparent);
       @include flex(space-between, center, row);
-      & > div {
-        border: 1px solid red;
+      // & > div {
+      //   @include size(40%, inherit, transparent);
+      //   border: 1px solid red;
+      // }
+      & > span { //금액
+        display: block;
+        font-size: 1.4em;
       }
-      // & > div:nth-child(1) { //금액
-        
-      // }
-      // & > div:nth-child(2) { //메세지버튼
-        
-      // }
+      & > button { //메세지버튼
+        @include size(45%, 5vh, orange);
+        @include flex(space-around, center, row);
+        padding: 0 2vw;
+        border: 0;
+        border-radius: 1vh;
+        color: $color-1;
+        & > div {
+          @include size(4.3vh, 4.3vh, transparent);
+          @include img(url(../images/hover-icon-message.png));
+        }
+      }
       
     }
   }
