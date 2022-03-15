@@ -179,6 +179,7 @@ li {
   border: 0;
   border-radius: 1vh;
   color: #fff;
+  cursor: pointer;
 }
 #container nav > div > button > div {
   width: 4.3vh;
@@ -236,7 +237,7 @@ li {
   align-items: center;
   flex-direction: row;
 }
-#container main section:nth-child(2) > div:nth-child(1) #profile > div {
+#container main section:nth-child(2) > div:nth-child(1) #profile > div > a {
   width: 5vh;
   height: 5vh;
   background-color: transparent;
@@ -265,6 +266,7 @@ li {
   height: 3.5vh;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
   background-image: url(../images/zzim_1.png);
   background-position: 50% 50%;
   background-size: 100% auto;
