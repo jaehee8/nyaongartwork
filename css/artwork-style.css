@@ -27,6 +27,12 @@ li {
     font-size: 16px;
   }
 
+  #back {
+    width: 40vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
   #container {
     width: 40vw;
     height: 100vh;
@@ -48,6 +54,12 @@ li {
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 14px;
+  }
+
+  #back {
+    width: 60vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   #container {
@@ -73,6 +85,12 @@ li {
     font-size: 12px;
   }
 
+  #back {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
   #container {
     width: 100vw;
     height: 100vh;
@@ -91,6 +109,20 @@ li {
     background-color: #cfc;
   }
 }
+#back {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+#back > div {
+  width: inherit;
+  height: 50%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  border-radius: 3vh 3vh 0 0;
+}
+
 #container header {
   width: inherit;
   height: 7vh;
@@ -140,6 +172,7 @@ li {
   background-position: 50% 50%;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 #container nav {
   width: inherit;

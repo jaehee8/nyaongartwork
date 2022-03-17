@@ -75,6 +75,9 @@ li {
   body {
     font-size: 16px;
   }
+  #back {
+    @include size(40vw, 100vh, rgba(0,0,0,.8));
+  }
   #container { 
     @include size(40vw, 100vh, $color-2);
     & main {
@@ -90,6 +93,9 @@ li {
 @include responsive-media-query($tablet-min-width, $desktop-min-width) {  //태블릿에서 보이는 사이즈 셋팅
   body {
     font-size: 14px;
+  }
+  #back {
+    @include size(60vw, 100vh, rgba(0,0,0,.8));
   }
   #container { 
     @include size(60vw, 100vh, $color-2);
@@ -107,6 +113,9 @@ li {
   body {
     font-size: 12px;
   }
+  #back {
+    @include size(100vw, 100vh, rgba(0,0,0,.8));
+  }
   #container {
     @include size(100vw, 100vh, $color-2);
     & main {
@@ -119,7 +128,17 @@ li {
     }
   }
 }
-
+#back {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  & > div {
+    @include size(inherit, 50%, $color-1);
+    position: absolute;
+    bottom: 0;
+    border-radius: 3vh 3vh 0 0;
+  }
+}
 #container {
   & header {
     @include size(inherit, $height-1, rgba(255,255,255,.6));
@@ -145,6 +164,7 @@ li {
       & > div:nth-child(2) { //햄버거 버튼
         @include size(4vh, 4vh, transparent);
         @include img(url(../images/icon-menu.png));
+        cursor: pointer;
       }
 
     }
