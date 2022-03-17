@@ -128,15 +128,83 @@ li {
     }
   }
 }
-#back {
+#back { //햄버거버튼 누르면 나오는 메뉴창
   position: fixed;
   top: 0;
   z-index: 2;
+  display: none;
+  
   & > div {
-    @include size(inherit, 50%, $color-1);
+    @include size(inherit, 40%, $color-1);
     position: absolute;
     bottom: 0;
     border-radius: 3vh 3vh 0 0;
+    @include flex(center, center, column);
+    & > button {//누르면 사라지는 버튼
+      @include size(100%, 5vh, transparent);
+      @include flex(center, center, row);
+      border: none;
+      & > div {
+        @include size(20%, 4px, $color-3);
+        border-radius: 2px;
+      }
+    }
+    & > div { //메뉴창
+      @include size(90%, 90%, transparent);
+      @include flex(center, center, column);
+      & > ul {
+        @include size(70%, 40%, transparent);
+        @include flex(space-between, center, row);
+        // border: 1px solid salmon;
+        & > li {
+          @include size(30%, 80%, transparent);
+          @include flex(center, center, column);
+          & > a { //아이콘
+            @include size(7vh, 7vh, transparent);
+            border: 1px solid $color-3;
+            border-radius: 50%;
+          }
+          & > span {
+            margin-top: 1vh;
+            color: $color-4;
+          }
+        }
+      }
+      & > ul:nth-child(1) {
+        & > li:nth-child(1) {
+          & a {
+            @include img(url(../images/menu-icon-share.png));
+          }
+        }
+        & > li:nth-child(2) {
+          & a {
+            @include img(url(../images/menu-icon-link.png));
+          }
+        }
+        & > li:nth-child(3) {
+          & a {
+            @include img(url(../images/menu-icon-report.png));
+          }
+        }
+      }
+      & > ul:nth-child(2) {
+        & > li:nth-child(1) {
+          & a {
+            @include img(url(../images/menu-icon-zzim.png));
+          }
+        }
+        & > li:nth-child(2) {
+          & a {
+            @include img(url(../images/menu-icon-alarm.png));
+          }
+        }
+        & > li:nth-child(3) {
+          & a {
+            @include img(url(../images/menu-icon-set.png));
+          }
+        }
+      }
+    }
   }
 }
 #container {

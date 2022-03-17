@@ -10,9 +10,46 @@
 </head>
 
 <body>
-  <!--? 모달창만들기 -->
+  <!--? 메뉴창만들기 -->
   <div id="back">
-    <div></div>
+    <div>
+      <!-- 누르면 back 사라지는버튼 -->
+      <button id="close">
+        <div></div>
+      </button>
+      <!-- 메뉴창 -->
+      <div>
+        <!-- 아이콘 -->
+        <ul>
+          <li>
+            <a href="#"></a>
+            <span>공유</span>
+          </li>
+          <li>
+            <a href="#"></a>
+            <span>링크</span>
+          </li>
+          <li>
+            <a href="#"></a>
+            <span>신고</span>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"></a>
+            <span>찜목록</span>
+          </li>
+          <li>
+            <a href="#"></a>
+            <span>알림</span>
+          </li>
+          <li>
+            <a href="#"></a>
+            <span>앱설정</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div id="container">
     <header>
@@ -22,7 +59,7 @@
           <a href="#"></a>
         </div>
         <!-- 햄버거버튼 -->
-        <div></div>
+        <div id="btnMenu"></div>
       </div>
     </header>
     <nav>
@@ -93,9 +130,26 @@
 </body>
 
 <script>
-  const loader = document.querySelector('#loading');
-  const html = document.querySelector('html');
+  //?모달창 만들기
+  /*
+  1. 햄버거 버튼 클릭하면 back 나타나라
+  2. 메뉴창 위 버튼을 클릭하면 back 사라져라
 
+  */
+  const btnMenu = document.querySelector('#btnMenu');
+  const back = document.querySelector('#back');
+  const closeBtn =document.querySelector('#close');
+
+  btnMenu.addEventListener('click', () => {
+    console.log('버튼클릭 이벤트발생');
+    console.dir(back);
+    back.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    console.log('close');
+    back.style.display = 'none';
+  });
 
   //size set
   function sizeSet(element, width, height, widthUnit, heightUnit) {
