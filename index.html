@@ -143,13 +143,25 @@
   btnMenu.addEventListener('click', () => {
     console.log('버튼클릭 이벤트발생');
     console.dir(back);
+    // back 나타나고
     back.style.display = 'block';
+    back.style.opacity = '1';
+    setTimeout(() => { // 메뉴창 올라와
+      back.children[0].style.bottom = '0';
+    }, 300); 
+    
   });
 
   closeBtn.addEventListener('click', () => {
-    console.log('close');
-    back.style.display = 'none';
+    //메뉴창먼저 내려가고 
+    back.children[0].style.bottom = '-40vh';
+    setTimeout(() => { //back 사라져
+      console.log('close');
+      back.style.opacity = '0';
+      back.style.display = 'none';
+    }, 400);
   });
+
 
   //size set
   function sizeSet(element, width, height, widthUnit, heightUnit) {

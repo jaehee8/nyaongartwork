@@ -132,13 +132,15 @@ li {
   position: fixed;
   top: 0;
   z-index: 2;
+  opacity: 0;
   display: none;
-  
+  // transition: .5s;
   & > div {
     @include size(inherit, 40%, $color-1);
     position: absolute;
-    bottom: 0;
+    bottom: -40vh;
     border-radius: 3vh 3vh 0 0;
+    transition: .3s;
     @include flex(center, center, column);
     & > button {//누르면 사라지는 버튼
       @include size(100%, 5vh, transparent);
