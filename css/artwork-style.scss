@@ -134,7 +134,6 @@ li {
   z-index: 2;
   opacity: 0;
   display: none;
-  // transition: .5s;
   & > div {
     @include size(inherit, 40%, $color-1);
     position: absolute;
