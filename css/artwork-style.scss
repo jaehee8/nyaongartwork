@@ -264,7 +264,7 @@ $height-2 :7vh;
         font-size: 1.4em;
       }
       & > button { //메세지버튼
-        @include size(45%, 5vh, orange);
+        @include size(50%, 5vh, orange);
         @include flex(space-around, center, row);
         padding: 0 2vw;
         border: 0;
@@ -275,6 +275,9 @@ $height-2 :7vh;
           @include size(4.3vh, 4.3vh, transparent);
           @include img(url(../images/hover-icon-message.png));
         }
+        & > span {
+          font-size: 1.2em;
+        }
       }
       
     }
@@ -282,7 +285,7 @@ $height-2 :7vh;
 
   & main {
     margin-top: $height-1;
-    margin-bottom: $height-2;
+    padding-bottom: $height-2;
     & section:nth-child(1) { //작품
       @include size(inherit, min-content, $color-1);
       @include flex(center, center, transparent);
@@ -329,10 +332,21 @@ $height-2 :7vh;
       & > div:nth-child(2) {
         @include size(90%, min-content, transparent);
         padding: 2vh 0;
-        & pre { //작품소개
+        & > p { //작품소개
           color: $color-6;
           font-size: 1em;
           padding: 1vh 0 5vh 0;
+        }
+        & > ul {
+          @include flex(start, center, row);
+          flex-wrap: wrap;
+          & li { //#태그
+            font-size: .9em;
+            line-height: 1;
+            margin: 5px 5px;
+            font-weight: 300;
+            cursor: pointer;
+          }
         }
       }
       
